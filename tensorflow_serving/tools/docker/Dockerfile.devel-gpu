@@ -44,6 +44,7 @@ RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/
         libcusolver-dev-11-8 \
         libcusparse-dev-11-8 \
         curl \
+        clang \
         git \
         libfreetype6-dev \
         libtool \
