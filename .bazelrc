@@ -10,6 +10,7 @@ build:cuda --define=using_cuda=true
 build:cuda --action_env=TF_CUDA_COMPUTE_CAPABILITIES="sm_35,sm_50,sm_60,sm_70,sm_75,compute_80"
 
 # Options used to build with CUDA clang
+build:cuda_clang --config=cuda
 build:cuda_clang --copt=-Qunused-arguments
 build_cuda_clang --copt=-Wno-unused-command-line-argument
 build:cuda_clang --copt=-Wno-gnu-offsetof-extensions
