@@ -10,6 +10,7 @@ build:cuda --define=using_cuda=true --define=using_cuda_nvcc=true
 build:cuda --action_env=TF_CUDA_COMPUTE_CAPABILITIES="sm_35,sm_50,sm_60,sm_70,sm_75,compute_80"
 
 # Options used to build with CUDA clang
+build:cuda_clang --copt=-Qunused-arguments
 build:cuda_clang --config=cuda
 build:cuda_clang --@local_config_cuda//:cuda_compiler=clang
 build:cuda_clang --action_env=TF_CUDA_CLANG="1"
