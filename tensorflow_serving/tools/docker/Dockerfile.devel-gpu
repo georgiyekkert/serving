@@ -25,6 +25,11 @@ ENV CUDNN_VERSION=8.6.0.163
 ENV TF_TENSORRT_VERSION=8.4.3
 ENV CUDA=11.8
 
+RUN apt-get update && apt-get install -y --no-install-recommends lsb-release wget software-properties-common gnupg
+RUN wget https://apt.llvm.org/llvm.sh
+RUN chmod +x llvm.sh
+RUN bash llvm.sh 17
+
 RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/3bf863cc.pub && \
     apt-get update && apt-get install -y --no-install-recommends \
         automake \
